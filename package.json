@@ -1,6 +1,6 @@
 {
   "name": "commenting",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Wrap content in a comment that is valid for a given file type.",
   "main": "index.js",
   "scripts": {
