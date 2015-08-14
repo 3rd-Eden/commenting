@@ -53,6 +53,10 @@ The following extensions are supported:
 - coffee: Uses `###` style comments.
 - jade: Uses `//` style comments.
 
+Empty files or extension option with `''` as value is automatically mapped to a
+hash `#` based comment style. This is because things like `.npmignore` or
+`.gitignore` don't have have extensions that we can track.
+
 ## License
 
 MIT
