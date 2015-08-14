@@ -43,6 +43,8 @@ extension['.coffee'] = styles.triple;
 
 extension['.jade'] = styles.slash;
 
+extension[''] = styles.hash;
+
 /**
  * Generate the resulting comment.
  *

@@ -58,4 +58,13 @@ describe('commenting', function () {
     assume(comment).includes(' * world\n');
     assume(comment).includes(' */');
   });
+
+  it('maps an empty string extension to hash', function () {
+    var comment = commenting(['hello', 'world'], {
+      extension: ''
+    });
+
+    assume(comment).includes('# hello\n');
+    assume(comment).includes('# world\n');
+  });
 });
