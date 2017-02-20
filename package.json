@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/3rd-Eden/commenting#readme",
   "devDependencies": {
-    "assume": "1.2.x",
+    "assume": "1.4.x",
     "istanbul": "0.3.x",
     "mocha": "2.2.x",
     "pre-commit": "1.0.x"
