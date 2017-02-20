@@ -29,6 +29,18 @@ describe('commenting', function () {
     assume(comment).includes(' */\n');
   });
 
+  it('keep empty lines', function () {
+    var comment = commenting(['hello', '', 'world'], {
+      extension: '.js'
+    });
+
+    assume(comment).includes('/**\n');
+    assume(comment).includes(' * hello\n');
+    assume(comment).includes(' *\n');
+    assume(comment).includes(' * world\n');
+    assume(comment).includes(' */\n');
+  });
+
   it('uses the supplied style', function () {
     var comment = commenting('hello  ', {
       style: commenting.styles.slash

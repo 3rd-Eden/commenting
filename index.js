@@ -13,7 +13,7 @@ var extension = Object.create(null)
  * @api private
  */
 function Style(body, start, end) {
-  this.body = body +' ';
+  this.body = body;
   this.end = end || body;
   this.start = start || body;
 }
@@ -77,7 +77,7 @@ function commenting(text, options) {
   // fewer Array.push calls for larger comments.
   //
   Array.prototype.push.apply(comment, text.map(function each(line) {
-    return style.body + line.trim();
+    return style.body + (line ? ' ' + line.trim() : '');
   }));
 
   comment.push(style.end);
