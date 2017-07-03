@@ -79,4 +79,13 @@ describe('commenting', function () {
     assume(comment).includes('# hello\n');
     assume(comment).includes('# world\n');
   });
+
+  it('maps appcache extension to hash', function () {
+    var comment = commenting(['hello', 'world'], {
+      extension: '.appcache'
+    });
+
+    assume(comment).includes('# hello\n');
+    assume(comment).includes('# world\n');
+  });
 });
