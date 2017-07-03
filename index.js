@@ -43,6 +43,7 @@ extension['.coffee'] = styles.triple;
 
 extension['.jade'] = styles.slash;
 
+extension['.appcache'] =
 extension[''] = styles.hash;
 
 /**
