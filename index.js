@@ -31,6 +31,7 @@ styles.html = new Style(' //', '<!--', '-->');
 // Assign the different extensions to their correct commenting styles.
 //
 extension['.htm'] =
+extension['.svg'] =
 extension['.html'] = styles.html;
 
 extension['.js'] =
