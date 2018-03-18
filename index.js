@@ -26,6 +26,7 @@ styles.slash = new Style('//');
 styles.star = new Style(' *','/**', ' */');
 styles.triple = new Style('', '###', '###');
 styles.html = new Style(' //', '<!--', '-->');
+styles.php = new Style(' *','<?php \n/**', '*/\n?>');
 
 //
 // Assign the different extensions to their correct commenting styles.
@@ -33,6 +34,7 @@ styles.html = new Style(' //', '<!--', '-->');
 extension['.htm'] =
 extension['.svg'] =
 extension['.html'] = styles.html;
+extension['.php'] = styles.php;
 
 extension['.js'] =
 extension['.css'] =
