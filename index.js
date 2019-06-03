@@ -32,6 +32,7 @@ styles.html = new Style(' //', '<!--', '-->');
 //
 extension['.htm'] =
 extension['.svg'] =
+extension['.xml'] =
 extension['.html'] = styles.html;
 
 extension['.js'] =

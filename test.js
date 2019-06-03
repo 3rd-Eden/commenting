@@ -88,4 +88,12 @@ describe('commenting', function () {
     assume(comment).includes('# hello\n');
     assume(comment).includes('# world\n');
   });
+
+  it('maps xml extension to html style', function () {
+    var comment = commenting(['hello', 'world'], {
+      extension: '.xml'
+    });
+
+    assume(comment).equals('<!--\n // hello\n // world\n-->\n');
+  });
 });
