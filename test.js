@@ -20,12 +20,24 @@ describe('commenting', function () {
   });
 
   it('trims comments', function () {
-    var comment = commenting('hello  ', {
+    var comment = commenting('  hello  ', {
       extension: '.js'
     });
 
     assume(comment).includes('/**\n');
     assume(comment).includes(' * hello\n');
+    assume(comment).includes(' */\n');
+  });
+
+  it('keeps each comments indented', function () {
+    var comment = commenting(['hello  ',  '    world'], {
+      extension: '.js',
+      keepIndent: true
+    });
+
+    assume(comment).includes('/**\n');
+    assume(comment).includes(' * hello\n');
+    assume(comment).includes(' *     world\n');
     assume(comment).includes(' */\n');
   });
 

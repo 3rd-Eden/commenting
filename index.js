@@ -69,6 +69,7 @@ function commenting(text, options) {
   if (options.extension && options.extension.charAt(0) !== '.') {
     options.extension = '.'+ options.extension;
   }
+  var keepIndent = !!options.keepIndent
 
   var style = options.style || extension[options.extension] || styles.star
     , comment = [];
@@ -80,7 +81,7 @@ function commenting(text, options) {
   // fewer Array.push calls for larger comments.
   //
   Array.prototype.push.apply(comment, text.map(function each(line) {
-    return style.body + (line ? ' ' + line.trim() : '');
+    return style.body + (line ? ' ' + (keepIndent ? line.trimEnd() : line.trim()) : '');
   }));
 
   comment.push(style.end);
