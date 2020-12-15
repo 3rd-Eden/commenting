@@ -43,6 +43,7 @@ extension['.styl'] = styles.star;
 
 extension['.coffee'] = styles.triple;
 
+extension['.dart'] = 
 extension['.jade'] = styles.slash;
 
 extension['.appcache'] =
